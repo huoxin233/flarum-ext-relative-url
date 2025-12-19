@@ -1,0 +1,12 @@
+huoxin-relative-url:
+  admin:
+    internal_domains_label: 站内域名
+    internal_domains_help:
+      包含这些域名的链接将被转换为相对路径。
+    internal_domains_placeholder: |
+      每行一个。
+      仅填写域名，不要包含 http/https。
+      例如：
+      forum1.org
+      forum2.org
+      forum3.org

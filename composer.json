@@ -1,0 +1,82 @@
+{
+    "name": "huoxin/relative-url",
+    "description": "Converts internal Url to relative Url for multi-domain support",
+    "keywords": [
+        "flarum",
+        "multi-domain",
+        "relative",
+        "links",
+        "url"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "require": {
+        "flarum/core": "^1.2.0"
+    },
+    "authors": [
+        {
+            "name": "huoxin",
+            "email": "23447157+huoxin233@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Huoxin\\RelativeUrl\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Relative Url",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-link",
+                "color": "#00a8e8",
+                "backgroundColor": "#fafafa"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": false,
+                "js": true,
+                "jsCommon": false,
+                "css": false,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": false,
+                "typescript": false,
+                "bundlewatch": false,
+                "backendTesting": true,
+                "editorConfig": true,
+                "styleci": true
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload-dev": {
+        "psr-4": {
+            "Huoxin\\RelativeUrl\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@test:unit",
+            "@test:integration"
+        ],
+        "test:unit": "phpunit -c tests/phpunit.unit.xml",
+        "test:integration": "phpunit -c tests/phpunit.integration.xml",
+        "test:setup": "@php tests/integration/setup.php"
+    },
+    "scripts-descriptions": {
+        "test": "Runs all tests.",
+        "test:unit": "Runs all unit tests.",
+        "test:integration": "Runs all integration tests.",
+        "test:setup": "Sets up a database for use with integration tests. Execute this only once."
+    },
+    "require-dev": {
+        "flarum/testing": "^1.0.0"
+    }
+}
