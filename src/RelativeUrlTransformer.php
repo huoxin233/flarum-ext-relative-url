@@ -19,11 +19,9 @@ use s9e\TextFormatter\Utils;
 class RelativeUrlTransformer
 {
     protected static ?array $prefixes = null;
-    protected SettingsRepositoryInterface $settings;
 
-    public function __construct(SettingsRepositoryInterface $settings)
+    public function __construct(protected SettingsRepositoryInterface $settings)
     {
-        $this->settings = $settings;
     }
 
     public function __invoke(Renderer $renderer, mixed $context, string $xml, ?ServerRequestInterface $request): string
